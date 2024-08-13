@@ -1,0 +1,209 @@
+header {
+}
+header nav {
+}
+header nav div.wrap::before {
+  content: "";
+  border-top: 1px solid rgb(245, 245, 245);
+  width: 100vw;
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  display: block;
+}
+header nav div.wrap ul.login {
+  column-gap: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+header nav div.wrap ul.login li {
+}
+header nav div.wrap ul.login li a {
+  font-size: 12px;
+}
+header nav div.wrap h1 {
+  margin: 0px;
+  grid-area: 2 / 1;
+  height: 50px;
+  align-content: center;
+}
+header nav div.wrap h1 a {
+  font-size: 0px;
+  background-image: url("../img/logo.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 127px;
+  display: block;
+  height: 20px;
+}
+header nav div.wrap ul.enb {
+  grid-area: 2 / 2;
+  display: flex;
+  column-gap: 30px;
+}
+header nav div.wrap ul.enb li:nth-child(1) {
+}
+header nav div.wrap ul.enb li:nth-child(1) a {
+  
+}
+header nav div.wrap ul.enb li:nth-child(1) a {
+  background-image: url("../img/search.svg");
+  width: 24px;
+  height: 24px;
+  display: block;
+  font-size: 0;
+}
+header nav div.wrap ul.enb li:nth-child(2) {
+}
+header nav div.wrap ul.enb li:nth-child(2) a {
+  background-image: url("../img/like.svg");
+  width: 24px;
+  height: 24px;
+  display: block;
+  font-size: 0;
+}
+header nav div.wrap ul.enb li:nth-child(3) {
+}
+header nav div.wrap ul.enb li:nth-child(3) a {
+  background-image: url(../img/shopping-bag.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+  font-size: 0;
+}
+header nav div.wrap ul.enb li:nth-child(4) a::before {
+  content: "";
+  border-left: 2px solid rgb(245, 245, 245);
+  display: block;
+  height: 15px;
+  position: absolute;
+  left: -31px;
+}
+header nav div.wrap ul.enb li:nth-child(4) a{
+  background-image: url(../img/logo-10cc.svg);
+  font-size: 0;
+  display: block;
+  background-size: contain;
+  background-position: center;
+  height: 22px; 
+  width: 120px;
+}
+header nav div.wrap ul.enb li:nth-child(5) a {
+  background-image: url(../img/logo-beaker.svg);
+  font-size: 0;
+  width: 67px;
+  height: 22px;
+  display: block;
+}
+header nav div.wrap ul.enb li:nth-child(6) a {
+  background-image: url(../img/logo-another.svg);
+  font-size: 0;
+  width: 67px;
+  height: 22px;
+  display: block;
+}
+header nav div.wrap ul.enb {
+  display: flex;
+  column-gap: 30px;
+}
+header nav div.wrap ul.gnb {
+  grid-area: 3 / 1 / auto / span 2;
+  display: flex;
+  column-gap: 8px;
+  height: 50px;
+  align-items: center;
+  width: fit-content;
+  font-size: 14px;
+}
+header nav div.wrap ul.gnb::before {
+}
+header nav div.wrap ul.gnb li {
+}
+header nav div.wrap ul.gnb li:nth-child(1) a {
+  left: 0px;
+  padding: 8px 8px 8px 0px;
+}
+header nav div.wrap ul.gnb li a {
+  padding: 8px;
+  box-sizing: border-box;
+}
+header nav div.wrap ul.gnb li {
+}
+header nav div.wrap ul.gnb li a {
+  padding: 8px;
+  box-sizing: border-box;
+}
+header nav div.wrap ul.gnb li:nth-child(16) {
+  transform: translateX(551px);
+}
+/* 타이틀영역 */
+#title {
+}
+
+#title > div {
+  max-width: 1903px;
+}
+#title div ul {
+  max-width: 100%;
+}
+#title div ul li.t1 {
+  background-image: url("../img/title1.jpg");
+}
+#title div ul li.t2{
+
+}
+#title div ul li a h2 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+#title div ul li {
+  width: calc(33.3333%);
+  height: 845px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#title div ul li a {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* 메인영역 */
+#sale {
+ 
+}
+#sale div {
+ 
+}
+#sale div h2 {
+ 
+}
+#sale div h2 ul {
+ 
+}
+#sale div h2 ul li {
+ 
+}
+#sale div h2 ul li ul {
+ 
+}
+#sale div h2 ul li ul li {
+ 
+}
+#sale div h2 ul li ul li a {
+ 
+}
+#sale div h2 ul li ul li a h3 {
+ 
+}
+#sale div h2 ul li ul li a h4 {
+ 
+}
