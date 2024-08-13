@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Pretendard폰트 -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){   
+            $('.titleani').slick({
+                infinite: true,
+                speed: 1500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false
+            });
+            // 정지와 다음버튼 묶기
+            $("#title button.slick-next,#title button.btn_pause").wrapAll("<div class='wnext'></div>");
+
+            var sw = 0;
+            $('.btn_pause').click(function(){
+                if(sw==0){
+                    $('.btn_pause').addClass('on');
+                    $('.titleani').slick('slickPause')
+                    sw = 1;
+                }else{
+                    $('.btn_pause').removeClass('on');
+                    $('.titleani').slick('slickPlay')
+                    sw = 0;
+                    }
+            });
+            $('.saleani').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                dots:true
+            });
+            $('.brandani').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+            $('.godani').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                speed: 300,
+
+                });
+            let num =  $("#sale .slick-arrow").length;   
+            let current = $("#sale ul li.slick-active").index();
+            $("#sale").append('<span class="number"><strong>' + (current) + '</strong>/' + num + '</span>');  
+            $("#sale .slick-prev,#sale .slick-next").click(function(){
+                current = $("#sale ul li.slick-active").index();
+                $("#sale .number strong").text(current);
+            });
+            
+
+
+
+
+        });
+    </script>
+
+</head>
+<body>
+     
+    <!-- 상단영역 -->
+    <header id="top">
+        <nav>
+            <div class="wrap">
+                <ul class="login">
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">로그인</a></li>
+                </ul>
+                <h1><a href="">ssf shop</a></h1>
+                <ul class="enb">
+                    <li><a href="">돋보기</a></li>
+                    <li><a href="">하트</a></li>
+                    <li><a href="">장바구니</a></li>
+                    <li><a href="">iocorsocomo</a></li>
+                    <li><a href="">beaker</a></li>
+                    <li><a href="">another</a></li>
+                </ul>
+                <ul class="gnb">
+                    <li><a href="">여성</a></li>
+                    <li><a href="">남성</a></li>
+                    <li><a href="">키즈</a></li>
+                    <li><a href="">럭셔리</a></li>
+                    <li><a href="">백&슈즈</a></li>
+                    <li><a href="">스포츠</a></li>
+                    <li><a href="">골프</a></li>
+                    <li><a href="">뷰티</a></li>
+                    <li><a href="">라이프</a></li>
+                    <li><a href="">아울렛</a></li>
+                    <li><a href="">랭킹</a></li>
+                    <li><a href="">브랜드</a></li>
+                    <li><a href="">매거진</a></li>
+                    <li><a href="">기획전</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">삼성전자</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- 타이틀영역 -->
+    <div id="title">
+        <div class="wrap">
+            <ul class="titleani">
+                <li class="t0 t1">
+                    <a href="">
+                        <h2></h2>
+                        <p><strong class="block"></strong>
+                        </p>
+                    </a>
+                </li>
+                <li class="t0 t2">
+                    <a href="">
+                        <h2>BEAKER</h2>
+                        <p><strong class="block">제이미유진의<br>
+                            맑은 여름 이야기
+                        </strong>
+                            환한 미소로 완성될<br>
+                            싱그러운 여름 스타일링 제안<br>
+                        </p>
+                    </a>
+                </li>
+                <li class="t0 t3">
+                    <a href="">
+                        <h2>BEAKER</h2>
+                        <p><strong class="block">기다렸다면<br>
+                            지금이 기회
+                        </strong>
+
+                           ~40% OFF 상품 추가<br>
+                           캡틴선샤인, 나나미카 등<br>
+                        </p>
+                    </a>
+                </li>
+                <li class="t0 t4">
+                    <a href="">
+                        <h2>KUHO PLUS</h2>
+                        <p><strong class="block">제이미유진의<br>
+                            맑은 여름 이야기<br>
+                        </strong>
+                           환한 미소로 완성될<br>
+                           싱그러운 여름 스타일링 제안<br>
+                        </p>
+                    </a>
+                </li>
+                <li class="t0 t5">
+                    <a href="">
+                        <h2>EVENT</h2>
+                        <p><strong>취향이 고스란히 담긴<br>
+                            스타일링<br>
+                        </strong>
+                        임플로이언서의 선택 + 12% 쿠폰<br>
+                        </p>
+                    </a>
+                </li>
+                <li class="t0 t6">
+                    <a href="">
+                        <h2>BEANPOLE</h2>
+                        <p><strong>작은 선물에<br>
+                            큰 마음 담아<br>
+                        </strong>
+                            때로는 더 크게 와 닿는 작은 선물<br>
+                            마음 담아 전하세요
+                        </p>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="btn_pause">
+             play
+            </button>
+        </div>
+    </div>
+    <!-- 메인영역 -->     
+    <section id="sale">
+        <div>
+            <h2>
+            </h2>
+            <ul class="f1 saleani">
+                    <li class="u1">
+                        <ul class="f1sub">
+                            <li>
+                                <a href="">
+                                    <h3>시간이 흐를수록 가치있는 클래식<span class="block"></span>
+                                        아울렛~70%
+                                    </h3>
+                                    <h4>LANSMERE</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>LANSMERE<br>
+                                        [Golf]코듀로이 팬츠-아<br>
+                                        이보리
+                                    </h3>
+                                    <h4>450,000<br>
+                                        70% 135,000</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>LANSMERE
+                                        울 퀄팅 패치 고트 스웨이드<span class="block"></span>
+                                        구스 다운 점퍼-베이지
+                                    </h3>
+                                    <h4>1950,000<span class="block"></span>
+                                        70% 585,000</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>여름엔 여우지<span class="block"></span>
+                                        시즌 오프 30%
+                                    </h3>
+                                    <h4>MAISON KITSUNE</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>Maison KITSUNE<br>
+                                        시즌오프30%<br>
+                                        Men Speedy Fox<br>
+                                    </h3>
+                                    <h4>21,5000<br>
+                                        30% 150,500</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>Maison Kitsune<span class="block"></span>
+                                        시즌 오프 30%<span class="block"></span>
+                                        Women Baby Fox
+                                    </h3>
+                                    <h4>195,000<span class="block"></span>
+                                        30% 136500
+                                    </h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="u2">
+                        <ul class="f1sub">
+                            <li>
+                                <a href="">
+                                    <h3>여름은 하트를 싣고<span class="block"></span>
+                                        시그니처 티셔츠 30%
+                                    </h3>
+                                    <h4>AMI</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>AMI<span class="block"></span>
+                                        30% OFF<span class="block"></span>
+                                        (Unisex) Boxy Fit Sl
+                                    </h3>
+                                    <h4>435,000<span class="block"></span>
+                                        30% 304,500
+                                    </h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>AMI<span class="block"></span>
+                                        30% OFF<span class="block"></span>
+                                        (Unisex) Ami De
+                                    <h4></h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>소장하고 싶은 클래식 아이템<span class="block"></span>
+                                        신상 시즌 오프~30%
+                                    </h3>
+                                    <h4>LEMAIRE</h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>LEMAIRE<span class="block"></span>
+                                        (Mem) Double<span class="block"></span>
+                                        Pocket Ss Shirt-
+                                    </h3>
+                                    <h4>995,000
+                                        30% 696,500
+                                    </h4>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <h3>LEMAIRE<span class="block"></span>
+                                        (Women) Cartridge Sport Bag-
+                                    </h3>
+                                    <h4>2,090,000</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+
+    </section>
+    <section id="brand">
+        <div>
+            <h2></h2>
+            <ul class="b1 brandani">
+                <li class="u1">
+                    <ul class="b1sub">
+                        <li>
+                            <a href="">
+                                <h3>빈폴</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>에잇세컨즈</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>비이커</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>띠어리</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>메종키츠네</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>쿠호</h3>     
+                            </a>
+                        <li>
+                            <a href="">
+                                <h3>쿠호플러스</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>준지</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>이세이미야케</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>아미</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>꼼데르송</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>라코스테</h3>     
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="u2">
+                    <ul class="f2sub">
+                        <li>
+                            <a href="">
+                                <h3>단톤</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>가니</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>텐코르소꼬모</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>르메르</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>르베이지</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>토리버치</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>락앤본</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>코렐로</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>디에퍼처</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>스튜디오니콜슨</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>아디다스</h3>     
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h3>아식스</h3>     
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>  
+    </section>
+    <section id="event">
+        <div>
+            <h2>이벤트</h2>
+            <ul>
+                <li>
+                    <a href="">
+                        <h3>처음이니까 더 특별한 혜택
+                        </h3>
+                        <p>스페셜 쿠폰팩 + ~89% 웰컴딜 + 캐시백까지 드려요</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>친구 1명만 초대해도 5천 코인</h3>
+                        <p>무제한 2천 코인까지 받아요</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>앱에서 첫 로그인하고 쿠폰 받으세요</h3>
+                        <p>1만원 쿠폰 즉시 지급</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="keyword">
+        <div>
+            <h2>컬러가 불어넣는 여름의 생동감</h2>
+            <ul class="list">
+                <li><a href="">스카이 블루</a></li>
+                <li><a href="">베이비 핑크</a></li>
+                <li><a href="">아이보리 & 베이지</a></li>
+                <li><a href="">라이트 그린</a></li>
+                <li><a href="">퍼플 & 라벤더</a></li>
+                <li><a href="">레몬 & 버터</a></li>
+            </ul>
+            <ul class="gods">
+                <li>
+                    <a href="">
+                        <ul class="text">
+                            <h3>General Idea</h3>
+                            <p>WOMAN GNRL 스퀘어 배색 반팔티 [SKY BLUE] </p>
+                            <p>43,000</p>
+                            <p>48% 판매가 22,400</p>
+                            <p>4.5(59)238</p>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <ul class="text">
+                            <h3>GANNI</h3>
+                            <p>Butterfly Mini Flat Cosmetic Pouch Sat</p>
+                            <p>215,000</p>
+                            <p>30% 판매가 150,500</p>
+                            <p>5.0(1)81</p>
+                        </ul>   
+                    </a>
+                </li>
+                <li>
+                    
+                    <a href="">
+                        <ul class="text">
+                            <h3>BEANPOLE LADIES</h3>
+                            <p>나일론 허리 밴딩 롱 셔츠 원피스 - 스카이블루</p>
+                            <p>399,000</p>
+                            <p>37% 판매가 251,370</p>
+                            <p>4.5(43)616</p>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <ul class="text">
+                            <h3>8 seconds</h3>
+                            <p>코튼 나일론 아우터형 셔츠 - 스카이블루</p>
+                            <p>49,900</p>
+                            <p>40% 판매가 29,900</p>
+                            <p>4.5(5)617</p>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <ul class="text">
+                            <h3>kuho plus</h3>
+                            <p>Back Detail Long Dress - Sky Blue</p>
+                            <p>219,000</p>
+                            <p>5.0(2)459</p>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <ul class="text">
+                            <h3>38Comeoncommon</h3>
+                            <p>[3차] Check Sheer Scrunchie (Sky Blue)</p>
+                            <p>12,000</p>
+                            <p>10% 판매가 10,800</p>
+                            <p>11</p>
+                        </ul>    
+                    </a>
+                </li>
+            </ul>          
+        </div>
+    </section>
+    <section id="godlist">
+        <div class="wrap">
+            <h2>주목할 브랜드</h2>
+            <div class="wrap">
+                <h3>ONITSUKA TIGER</h3>
+                <p>신어보지 않아도 보이는 쇼핑<br>
+                    스테디셀러 재입고 15% 쿠폰</p>
+                <p><a href="">기획전 바로가기</a></p>
+            </div>
+            <ul class="godani">
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 멕시코 66<br> 
+                        사봇</p>
+                        <p>200,000</p>
+                        <p>10% 판매가 180,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 멕시코 66<br> 
+                        사봇</p>
+                        <p>200,000</p>
+                        <p>10% 판매가 180,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 레빌락 샌들</p>
+                        <p></p>
+                        <p>220,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 레빌락 샌들</p>
+                        <p>220,000</p>
+                        <p>10% 198,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 레빌락 샌들</p>
+                        <p></p>
+                        <p>220,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 레빌락 샌들</p>
+                        <p></p>
+                        <p>200,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 멕시코 66<br> 
+                        사봇</p>
+                        <p>200,000</p>
+                        <p>180,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 멕시코 66<br>
+                        사봇</p>
+                        <p>200,000</p>
+                        <p>180,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 멕시코 66<br>
+                        사봇</p>
+                        <p>200,000</p>
+                        <p>180,000</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>Onitsuka Tiger</h3>
+                        <p>오니츠카 타이거 멕시코 66<br> 
+                        사봇</p>
+                        <p>200,000</p>
+                        <p>180,000</p>
+                    </a>
+                </li>
+            </ul>
+        </div>      
+    </section>
+    <section id="footer">
+        <div>
+            <ul class="f1">
+                <li>회사소개</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li> 이메일무단수집거부</li>
+            </ul>
+            <ul class="f2">
+                <li>단체주문</li>
+                <li>제휴문의</li>
+                <li>입점신청</li>
+                <li>멤버십안내
+                </li>
+            </ul>
+            <ul class="f3">
+                <li>고객센터</li>
+                <li>공지사항</li>
+                <li>매장찾기</li>
+            </ul>
+            <address><strong>삼성물산(주)패션부문</strong>
+                    <span>주소: 서울특별시 강남구 남부순환로 2806(도곡동) </span><span>대표: 오세철 외 2명</span><span>사업자 등록번호: 101-85-43600 <a href="">사업자정보확인</a></span><span>통신판매업 신고번호: 제 2015-서울강남-02894</span> 호스팅서비스: 삼성물산(주)패션부문<br>
+                    <span>대표전화 1599-0007(전국) 080-700-1472(수신자부담)</span>
+            </address>
+            <p>KG모빌리언스 구매안전(에스크로)서비스 <a href="">서비스 가입사실 확인</a>서비스 가입사실 확인 고객님의 안전거래를 위해 현금 등으로 5만원 이상 결제 시 저희 쇼핑몰에서 가입한 구매안전(에스크로) 서비스를 이용하실 수 있습니다.</p>
+            <p>Copyright (C) 2024 Samsung C&T Corporation. All rights reserved</p>
+            <p>인증범위 : 패션부문 온라인 쇼핑몰 서비스 운영 (SSFSHOP, 토리버치)  |  유효기간 : 2022.08.12 ~ 2025.08.11 </p>
+            <ul class="f4">
+                <li><a href="">유투브</a></li>
+                <li><a href="">인스타</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
